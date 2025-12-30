@@ -1,144 +1,193 @@
-shivudha.github.io/
-│
-├── index.html
-├── style.css
-└── assets/
-    ├── logo.png
-    ├── cordset1.jpg
-    ├── cordset2.jpg
-    └── cordset3.jpg
+:root {
+    --primary-color: #1a1a1a;
+    --accent-color: #f8f5f2; /* Light beige */
+    --text-muted: #666;
+    --transition: all 0.4s ease;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: #f8f6f3;
-  color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* HEADER */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
+h1, h2, h3 {
+    font-family: 'Tenor Sans', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-.logo {
-  max-height: 70px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
-nav a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: #1a1a1a;
-  font-weight: 500;
+/* Announcement */
+.announcement-bar {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 10px;
+    letter-spacing: 2px;
 }
 
-nav a:hover {
-  border-bottom: 2px solid #b89b5e;
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 90px 20px;
-  background: #f1ede7;
+.nav-left a, .nav-right a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0 15px;
+    letter-spacing: 1.5px;
 }
 
-.hero h1 {
-  font-size: 48px;
-  letter-spacing: 2px;
+.site-logo {
+    height: 40px;
+    width: auto;
 }
 
-.hero p {
-  margin-top: 15px;
-  font-size: 18px;
-  color: #555;
+/* Hero */
+.hero-v2 {
+    height: 85vh;
+    background: #f4f4f4; /* Replace with an image background later */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-/* COLLECTION */
-.collection {
-  padding: 70px 40px;
-  text-align: center;
+.sub-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 15px;
 }
 
-.collection h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
+.hero-v2 h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 20px;
 }
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+.btn-primary {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-top: 30px;
+    transition: var(--transition);
+    font-size: 13px;
+    text-transform: uppercase;
 }
 
-.product-card {
-  background: #fff;
-  padding: 15px;
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.btn-primary:hover {
+    background: var(--primary-color);
+    color: white;
 }
 
-.product-card img {
-  width: 100%;
-  border-radius: 10px;
+/* Grid */
+.section { padding: 100px 0; }
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.product-card span {
-  display: block;
-  margin-top: 15px;
-  font-weight: 500;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+.img-wrapper {
+    overflow: hidden;
+    background: #f9f9f9;
+    margin-bottom: 15px;
+    aspect-ratio: 3/4;
 }
 
-/* ABOUT */
-.about {
-  padding: 70px 25px;
-  background: #fff;
-  text-align: center;
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
 }
 
-.about h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
+.item:hover img {
+    transform: scale(1.05);
 }
 
-.about p {
-  max-width: 720px;
-  margin: auto;
-  color: #555;
-  font-size: 17px;
-  line-height: 1.7;
+.item h3 { font-size: 14px; margin-bottom: 5px; }
+.item span { font-size: 13px; color: var(--text-muted); }
+
+/* Story */
+.brand-story {
+    background-color: var(--accent-color);
+    padding: 120px 0;
+    text-align: center;
 }
 
-/* FOOTER */
-.contact {
-  background: #111;
-  color: #eee;
-  text-align: center;
-  padding: 30px 20px;
+.story-content { max-width: 600px; margin: 0 auto; }
+.story-content h2 { margin-bottom: 20px; }
+.story-content p { font-size: 16px; line-height: 1.8; color: var(--text-muted); }
+
+/* Footer */
+.site-footer {
+    padding: 80px 0 40px;
+    text-align: center;
+    border-top: 1px solid #eee;
 }
 
-.contact a {
-  color: #b89b5e;
-  text-decoration: none;
-  font-weight: 600;
+.footer-email {
+    display: block;
+    margin-top: 20px;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
-.contact small {
-  display: block;
-  margin-top: 10px;
-  font-size: 13px;
-  color: #aaa;
+.whatsapp-sticky {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+}
+
+.whatsapp-sticky a {
+    background: #000;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+    .main-header { padding: 20px; }
+    .nav-left, .nav-right { display: none; } /* Mobile simplicity */
 }
