@@ -8,27 +8,25 @@
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #1a1a1a;
   background-color: #fff;
-  scroll-behavior: smooth;
 }
 
 /* Header & Logo */
 .header {
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  padding: 30px 0;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
   position: sticky;
   top: 0;
-  background: white;
+  background: #fff;
   z-index: 1000;
-  text-align: center; /* Centers the logo and nav */
 }
 
 .logo {
-  height: 60px; /* Fixed height to prevent "jumping" layout */
+  height: 70px; /* Made the logo slightly bigger */
   width: auto;
-  display: block;
-  margin: 0 auto 15px; /* Centers the logo and adds space below */
+  margin-bottom: 15px;
 }
 
 nav a {
@@ -36,40 +34,32 @@ nav a {
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  font-weight: 500;
-}
-
-nav a:hover {
-  color: #666;
+  font-size: 12px;
+  letter-spacing: 2px;
 }
 
 /* Hero Section */
 .hero {
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 100px 20px;
   text-align: center;
-  background-color: #f9f9f9;
-  padding: 0 20px;
+  background-color: #fcfcfc;
 }
 
-.hero h1 {
-  font-size: clamp(1.8rem, 5vw, 3.5rem);
-  letter-spacing: 5px;
-  margin-bottom: 10px;
+.hero-title {
+  font-size: 4rem; /* Big, bold title */
+  font-weight: 300;
+  letter-spacing: 8px;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #666;
 }
 
-/* Collection Grid */
+/* Collection & Products */
 .collection {
   padding: 80px 20px;
   max-width: 1200px;
@@ -78,31 +68,81 @@ nav a:hover {
 
 .collection h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-bottom: 50px;
+  gap: 40px;
+}
+
+.product-card {
+  text-align: center;
 }
 
 .product-card img {
   width: 100%;
   height: auto;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+  margin-bottom: 15px;
+  /* Adds a subtle elegant border */
+  border: 1px solid #f0f0f0; 
 }
 
-.product-card:hover img {
-  transform: scale(1.02);
+.price {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 /* WhatsApp Button */
+.cta-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
 .whatsapp-btn {
-  display: block;
-  width: fit-content;
+  display: inline-block;
+  background-color: #000; /* Classy black instead of green */
+  color: #fff;
+  padding: 20px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  border-radius: 0; /* Square edges look more premium */
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background-color: #333;
+}
+
+/* About & Footer */
+.about {
+  padding: 100px 20px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.contact a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
