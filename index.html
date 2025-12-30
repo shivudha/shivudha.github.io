@@ -1,80 +1,49 @@
-<header>
-  <video autoplay muted loop id="bg-video">
-    <source src="hero.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
-  <div class="header-content">
-    <img src="logo.png" alt="Shivudha Logo" class="logo">
-    <h1>Shivudha Crew</h1>
-    <nav>
-      <a href="#collection">Collection</a>
-      <a href="#footer">Contact</a>
-    </nav>
-  </div>
+<header class="header">
+  <img src="assets/logo.png" alt="SHIVUDHA CREW Logo" class="logo">
+  <nav>
+    <a href="#collection">Collection</a>
+    <a href="#about">Brand</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
-<header>
-  <video autoplay muted loop id="bg-video">
-    <source src="hero.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>
-  <div class="header-content">
-    <img src="logo.png" alt="Shivudha Logo" width="120">
-    <h1>Shivudha Crew</h1>
-    <nav>
-      <a href="#collection">Collection</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<section class="hero">
+  <h1>SHIVUDHA CREW</h1>
+  <p>Effortless silhouettes. Elevated everyday wear.</p>
+</section>
+<section id="collection" class="collection">
+  <h2>Featured Collection</h2>
+
+  <div class="products">
+    <div class="product-card">
+      <img src="assets/cordset1.jpg" alt="Cord Set 1">
+      <span>Signature Neutral Cord Set</span>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/cordset2.jpg" alt="Cord Set 2">
+      <span>Urban Luxe Cord Set</span>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/cordset3.jpg" alt="Cord Set 3">
+      <span>Minimal Statement Cord Set</span>
+    </div>
   </div>
-</header>
-/* Video Background */
-#bg-video {
-  position: absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  object-fit:cover;
-  z-index:0;
-}
-
-header {
-  position: relative;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  color:white;
-}
-
-.header-content {
-  position: relative;
-  z-index:1; /* Above video */
-}
-
-/* Optional overlay for readability */
-header::before {
-  content:"";
-  position:absolute;
-  top:0; left:0; right:0; bottom:0;
-  background:rgba(0,0,0,0.4); /* Semi-transparent overlay */
-  z-index:0;
-}
-<!-- Cordset 1 -->
-<div class="card">
-  <img src="assets/images/cordset1.jpg" alt="Cordset 1">
-  <h3>Cordset 1</h3>
-  <p>Elegant premium cordset</p>
-</div>
-
-<!-- Cordset 2 -->
-<div class="card">
-  <img src="assets/images/cordset2.jpg" alt="Cordset 2">
-  <h3>Cordset 2</h3>
-  <p>Stylish comfort design</p>
-</div>
-
-<!-- Cordset 3 -->
-<div class="card">
-  <img src="assets/images/cordset3.jpg" alt="Cordset 3">
-  <h3>Cordset 3</h3>
-  <p>Premium quality fabric</p>
-</div>
+</section>
+<section id="about" class="about">
+  <h2>The SHIVUDHA CREW Philosophy</h2>
+  <p>
+    SHIVUDHA CREW is a contemporary clothing label focused on clean cuts,
+    refined textures, and timeless comfort.  
+    Designed for women who prefer understated luxury—everyday.
+  </p>
+</section>
+<footer id="contact" class="contact">
+  <p>
+    For collaborations & orders:<br>
+    <a href="mailto:shivudha112026@gmail.com">
+      shivudha112026@gmail.com
+    </a>
+  </p>
+  <small>© 2025 SHIVUDHA CREW</small>
+</footer>
