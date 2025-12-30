@@ -12,3 +12,49 @@
     </nav>
   </div>
 </header>
+<header>
+  <video autoplay muted loop id="bg-video">
+    <source src="hero.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="header-content">
+    <img src="logo.png" alt="Shivudha Logo" width="120">
+    <h1>Shivudha Crew</h1>
+    <nav>
+      <a href="#collection">Collection</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+/* Video Background */
+#bg-video {
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  z-index:0;
+}
+
+header {
+  position: relative;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+}
+
+.header-content {
+  position: relative;
+  z-index:1; /* Above video */
+}
+
+/* Optional overlay for readability */
+header::before {
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background:rgba(0,0,0,0.4); /* Semi-transparent overlay */
+  z-index:0;
+}
