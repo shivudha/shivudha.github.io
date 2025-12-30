@@ -17,3 +17,23 @@
     </div>
   </div>
 </section>
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product {
+  background-color: #fff;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.product img {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
