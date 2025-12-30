@@ -1,151 +1,147 @@
-/* Color Palette */
 :root {
-  --brand-green: #1B3022; /* Classic Deep Green */
-  --light-bg: #F4F7F5;   /* Very soft green-tinted white */
+  --bg: #f8f9f8;
+  --dark-green: #1b3022;
+  --sage: #84a59d;
+  --text: #1a1a1a;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; padding: 0; box-sizing: border-box;
 }
 
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #1a1a1a;
-  background-color: #fff;
-  line-height: 1.6;
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
 }
 
-/* HEADER & LOGO */
-.header {
-  padding: 60px 0 40px;
+/* Announcement */
+.top-banner {
+  background: var(--dark-green);
+  color: white;
   text-align: center;
+  padding: 10px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Trendy Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  background: white;
   border-bottom: 1px solid #eee;
-  background: #fff;
+  position: sticky; top: 0; z-index: 100;
 }
 
-.logo {
-  height: 300px; /* Extra large size */
+.logo-box img {
+  height: 250px; /* Big Impactful Logo */
   width: auto;
-  display: block;
-  margin: 0 auto 30px;
-  object-fit: contain;
-  image-rendering: -webkit-optimize-contrast;
-}
-
-nav a {
-  margin: 0 20px;
-  text-decoration: none;
-  color: var(--brand-green);
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 3px;
-  font-weight: 600;
-}
-
-/* HERO */
-.hero {
-  padding: 120px 20px;
-  text-align: center;
-  background-color: var(--light-bg);
-}
-
-.hero-title {
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  color: var(--brand-green);
-  letter-spacing: 12px;
-  text-transform: uppercase;
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-
-/* COLLECTION */
-.collection {
-  padding: 100px 20px;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-.collection h2 {
-  text-align: center;
-  margin-bottom: 60px;
-  color: var(--brand-green);
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 50px;
-}
-
-.product-card {
-  text-align: center;
-}
-
-.product-card img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #f0f0f0;
   transition: transform 0.3s ease;
 }
 
-.product-card:hover img {
-  transform: scale(1.02);
-}
-
-.price {
-  font-size: 1.4rem;
-  margin-top: 15px;
-  color: var(--brand-green);
-  font-weight: 500;
-}
-
-/* WHATSAPP BUTTON - GREEN THEME */
-.cta-container {
-  text-align: center;
-  margin-top: 80px;
-}
-
-.whatsapp-btn {
-  display: inline-block;
-  background-color: var(--brand-green);
-  color: #fff;
-  padding: 22px 60px;
+.nav-links a {
   text-decoration: none;
+  color: var(--text);
   text-transform: uppercase;
-  letter-spacing: 4px;
-  font-weight: bold;
-  transition: opacity 0.3s;
+  font-weight: 500;
+  font-size: 13px;
+  margin: 0 20px;
+  letter-spacing: 1px;
 }
 
-.whatsapp-btn:hover {
-  opacity: 0.9;
-}
-
-/* FOOTER */
-.contact {
-  padding: 80px 20px;
+/* Hero Section */
+.hero-section {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  background: var(--light-bg);
-  color: var(--brand-green);
 }
 
-.contact a {
-  color: var(--brand-green);
-  font-weight: bold;
+.glitch-title {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 5rem;
+  line-height: 0.9;
+  text-transform: uppercase;
+  color: var(--dark-green);
+  margin-bottom: 20px;
 }
 
-.masked-address {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  opacity: 0.8;
+.shop-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 40px;
+  background: var(--dark-green);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
 }
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-  .logo { height: 180px; }
-  .hero-title { letter-spacing: 6px; }
+/* Product Grid */
+.collection-area { padding: 100px 5%; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.img-container {
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-container img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.img-container:hover img { transform: scale(1.05); }
+
+.badge {
+  position: absolute; top: 15px; left: 15px;
+  background: var(--dark-green);
+  color: white; padding: 5px 12px; font-size: 10px; border-radius: 20px;
+}
+
+.product-meta { padding: 20px 0; text-align: left; }
+.product-meta h3 { font-size: 18px; text-transform: uppercase; }
+.product-meta p { color: var(--sage); font-weight: bold; }
+
+/* WhatsApp Pill */
+.whatsapp-pill {
+  position: fixed; bottom: 30px; right: 30px;
+  background: #25D366; color: white;
+  padding: 15px 25px; border-radius: 50px;
+  text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  font-weight: bold; z-index: 999;
+}
+
+/* Footer */
+.footer {
+  padding: 100px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.footer a { color: var(--dark-green); font-weight: bold; text-decoration: none; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid-container { grid-template-columns: 1fr; }
+  .glitch-title { font-size: 3rem; }
+  .main-header { flex-direction: column; padding: 20px; }
+  .nav-links { margin-top: 20px; }
 }
