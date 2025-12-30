@@ -1,6 +1,6 @@
 :root {
-  --brand-teal: #6ca7a9; /* Matches your Seafoam background */
-  --brand-gold: #b18c5d; /* Matches your brand accents */
+  --brand-teal: #6ca7a9;
+  --brand-gold: #b18c5d;
   --dark-text: #2c2c2c;
 }
 
@@ -13,34 +13,36 @@ body {
   line-height: 1.6;
 }
 
-/* Fixes the "Ruined" alignment - This centers the logo and nav */
+/* Header - Perfectly Centered */
 .header {
-  padding: 40px 0;
+  padding: 60px 0; /* Increased padding for the larger logo */
   text-align: center;
   background: white;
   border-bottom: 1px solid #eee;
-  position: sticky; top: 0; z-index: 1000;
 }
 
+/* LOGO DOUBLED SIZE */
 .logo {
-  height: 180px; /* Adjusted for better balance */
+  height: 400px; /* Doubled from 200px */
   width: auto;
-  margin-bottom: 15px;
+  display: block;
+  margin: 0 auto 30px;
+  image-rendering: -webkit-optimize-contrast; /* Keeps it sharp */
 }
 
 .main-nav a {
-  margin: 0 15px;
+  margin: 0 20px;
   text-decoration: none;
   color: var(--brand-teal);
   text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 2px;
+  font-size: 13px;
+  letter-spacing: 3px;
   font-weight: 600;
 }
 
-/* Hero - Spans the full width of the screen */
+/* Hero - Full Screen Width */
 .hero {
-  padding: 100px 20px;
+  padding: 120px 20px;
   background-color: var(--brand-teal);
   color: white;
   text-align: center;
@@ -48,54 +50,61 @@ body {
 
 .hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  letter-spacing: 5px;
-  margin-bottom: 10px;
+  font-size: clamp(3rem, 10vw, 5rem);
+  letter-spacing: 6px;
+  margin-bottom: 15px;
 }
 
-/* Centered Grid - No more empty space on the right */
+/* Collection Layout */
 .collection {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
-.section-title { text-align: center; margin-bottom: 50px; }
+.section-title { text-align: center; margin-bottom: 60px; }
 .gold-accent { 
-  width: 50px; height: 2px; background: var(--brand-gold); margin: 15px auto; 
+  width: 80px; height: 2px; background: var(--brand-gold); margin: 20px auto; 
 }
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 60px;
 }
 
-.img-container { border: 1px solid #f0f0f0; overflow: hidden; }
+.img-container { border: 1px solid #f2f2f2; overflow: hidden; }
 .product-card img {
   width: 100%;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
 }
 
-.product-info { padding: 20px 0; text-align: center; }
-.product-info h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--brand-teal); }
-.price { font-weight: bold; color: var(--brand-gold); }
+.product-info { padding: 30px 0; text-align: center; }
+.product-info h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--brand-teal); }
+.price { font-weight: bold; color: var(--brand-gold); font-size: 1.2rem; }
 
-.cta-section { text-align: center; margin-top: 50px; }
+.cta-section { text-align: center; margin-top: 60px; }
 .whatsapp-btn {
   display: inline-block;
   background: var(--brand-teal);
   color: white;
-  padding: 18px 45px;
+  padding: 22px 60px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .footer {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
   background: #fdfdfd;
   border-top: 1px solid #eee;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .logo { height: 200px; } /* Scales down for mobile screens */
+  .hero-title { font-size: 2.5rem; }
 }
