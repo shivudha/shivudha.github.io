@@ -110,3 +110,40 @@ footer { background:#222; color:white; padding:30px 20px; text-align:center; mar
 @media(max-width:600px){ 
   .products { flex-direction:column; align-items:center; } 
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivudha Crew</title>
+<style>
+body, html { margin:0; padding:0; height:100%; font-family: Arial, sans-serif; }
+
+/* Full-screen Hero Background */
+header {
+  height: 100vh; /* Full screen */
+  background: url('hero.jpg') no-repeat center center/cover; /* Your background image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+header::before {
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background:rgba(0,0,0,0.5); /* Dark overlay for readability */
+  backdrop-filter: blur(3px); /* Optional blur effect */
+}
+header img, header h1, nav { position: relative; z-index: 1; }
+header h1 { font-size:3rem; margin-bottom:10px; }
+nav a { margin:0 15px; padding:10px 20px; border-radius:5px; background:rgba(255,255,255,0.2); transition:0.3s; color:white; }
+nav a:hover { background:rgba(255,255,255,0.5); }
+
+/* Collection Section */
+section { padding:60px 20px; text-align:center; background:#f9f9f9; }
+h2 { font-size:2.5rem; margin-bottom:40px; color:#222; }
+.products { display:flex; flex-wrap:wrap; jus
