@@ -1,33 +1,151 @@
-/* Header & Logo Section */
+/* Color Palette */
+:root {
+  --brand-green: #1B3022; /* Classic Deep Green */
+  --light-bg: #F4F7F5;   /* Very soft green-tinted white */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #1a1a1a;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* HEADER & LOGO */
 .header {
-  padding: 40px 0 20px;
+  padding: 60px 0 40px;
   text-align: center;
-  border-bottom: 1px solid #f2f2f2;
-  position: sticky;
-  top: 0;
+  border-bottom: 1px solid #eee;
   background: #fff;
-  z-index: 1000;
 }
 
 .logo {
-  /* This is the key for clarity */
-  height: 280px; 
+  height: 300px; /* Extra large size */
   width: auto;
   display: block;
-  margin: 0 auto 20px;
-  
-  /* These properties help with sharpness */
+  margin: 0 auto 30px;
   object-fit: contain;
-  image-rendering: -webkit-optimize-contrast; /* For Chrome/Safari */
-  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 nav a {
   margin: 0 20px;
   text-decoration: none;
-  color: #000;
+  color: var(--brand-green);
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 3px;
+  font-weight: 600;
+}
+
+/* HERO */
+.hero {
+  padding: 120px 20px;
+  text-align: center;
+  background-color: var(--light-bg);
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  color: var(--brand-green);
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+/* COLLECTION */
+.collection {
+  padding: 100px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.collection h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--brand-green);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px;
+}
+
+.product-card {
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #f0f0f0;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.02);
+}
+
+.price {
+  font-size: 1.4rem;
+  margin-top: 15px;
+  color: var(--brand-green);
   font-weight: 500;
+}
+
+/* WHATSAPP BUTTON - GREEN THEME */
+.cta-container {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background-color: var(--brand-green);
+  color: #fff;
+  padding: 22px 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.whatsapp-btn:hover {
+  opacity: 0.9;
+}
+
+/* FOOTER */
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: var(--light-bg);
+  color: var(--brand-green);
+}
+
+.contact a {
+  color: var(--brand-green);
+  font-weight: bold;
+}
+
+.masked-address {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .logo { height: 180px; }
+  .hero-title { letter-spacing: 6px; }
 }
