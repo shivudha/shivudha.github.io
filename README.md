@@ -37,3 +37,12 @@
   border-radius: 5px;
   margin-bottom: 10px;
 }
+<header>
+  <img src="images/7f30e549-1e00-457a-b25a-fe12ec1ff5a1.png" alt="Shivudha Logo" width="120" style="display:block; margin: 0 auto 10px;">
+  <h1>Shivudha Crew</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#collection">Collection</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
