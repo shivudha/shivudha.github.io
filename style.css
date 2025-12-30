@@ -1,147 +1,116 @@
 :root {
-  --bg: #f8f9f8;
-  --dark-green: #1b3022;
-  --sage: #84a59d;
-  --text: #1a1a1a;
+  --brand-teal: #6ca7a9; /* Matches your card background */
+  --brand-gold: #b18c5d; /* Matches your gold logo text */
+  --dark-text: #2c2c2c;
 }
 
-* {
-  margin: 0; padding: 0; box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'Space Grotesk', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: var(--dark-text);
+  line-height: 1.6;
 }
 
-/* Announcement */
-.top-banner {
-  background: var(--dark-green);
-  color: white;
+/* Header - Fixed & Centered */
+.header {
+  padding: 40px 0;
   text-align: center;
-  padding: 10px;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-/* Trendy Header */
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 60px;
   background: white;
   border-bottom: 1px solid #eee;
-  position: sticky; top: 0; z-index: 100;
+  position: sticky; top: 0; z-index: 1000;
 }
 
-.logo-box img {
-  height: 250px; /* Big Impactful Logo */
+.logo {
+  height: 200px;
   width: auto;
-  transition: transform 0.3s ease;
+  margin-bottom: 15px;
 }
 
-.nav-links a {
+.main-nav a {
+  margin: 0 15px;
   text-decoration: none;
-  color: var(--text);
+  color: var(--brand-teal);
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 13px;
-  margin: 0 20px;
-  letter-spacing: 1px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
-/* Hero Section */
-.hero-section {
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Hero - Premium Teal Background */
+.hero {
+  padding: 100px 20px;
+  background-color: var(--brand-teal);
+  color: white;
   text-align: center;
 }
 
-.glitch-title {
-  font-family: 'Syncopate', sans-serif;
-  font-size: 5rem;
-  line-height: 0.9;
-  text-transform: uppercase;
-  color: var(--dark-green);
-  margin-bottom: 20px;
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
 }
 
-.shop-btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 15px 40px;
-  background: var(--dark-green);
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 2px;
+.hero-subtitle { font-weight: 300; letter-spacing: 2px; }
+
+/* Grid Fix - Perfectly Centered */
+.collection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
 }
 
-/* Product Grid */
-.collection-area { padding: 100px 5%; }
+.section-title { text-align: center; margin-bottom: 50px; }
+.gold-accent { 
+  width: 50px; height: 2px; background: var(--brand-gold); margin: 15px auto; 
+}
 
-.grid-container {
+.products {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
 }
 
-.img-container {
-  position: relative;
-  background: #fff;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.img-container img {
+.img-container { border: 1px solid #f0f0f0; overflow: hidden; }
+.product-card img {
   width: 100%;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  display: block;
+  transition: transform 0.4s ease;
 }
+.product-card:hover img { transform: scale(1.03); }
 
-.img-container:hover img { transform: scale(1.05); }
+.product-info { padding: 20px 0; text-align: center; }
+.product-info h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--brand-teal); }
+.price { font-weight: bold; color: var(--brand-gold); margin-top: 5px; }
 
-.badge {
-  position: absolute; top: 15px; left: 15px;
-  background: var(--dark-green);
-  color: white; padding: 5px 12px; font-size: 10px; border-radius: 20px;
-}
-
-.product-meta { padding: 20px 0; text-align: left; }
-.product-meta h3 { font-size: 18px; text-transform: uppercase; }
-.product-meta p { color: var(--sage); font-weight: bold; }
-
-/* WhatsApp Pill */
-.whatsapp-pill {
-  position: fixed; bottom: 30px; right: 30px;
-  background: #25D366; color: white;
-  padding: 15px 25px; border-radius: 50px;
-  text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  font-weight: bold; z-index: 999;
+/* WhatsApp Button */
+.cta-section { text-align: center; margin-top: 50px; }
+.whatsapp-btn {
+  display: inline-block;
+  background: var(--brand-teal);
+  color: white;
+  padding: 18px 45px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 /* Footer */
 .footer {
-  padding: 100px 20px;
-  background: #fff;
+  padding: 60px 20px;
   text-align: center;
+  background: #fdfdfd;
+  border-top: 1px solid #eee;
 }
 
-.footer a { color: var(--dark-green); font-weight: bold; text-decoration: none; }
+.footer-details p { margin: 5px 0; color: var(--brand-teal); font-weight: 500; }
+.location { font-size: 12px; color: #888; text-transform: uppercase; }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .grid-container { grid-template-columns: 1fr; }
-  .glitch-title { font-size: 3rem; }
-  .main-header { flex-direction: column; padding: 20px; }
-  .nav-links { margin-top: 20px; }
+/* Mobile View Fix */
+@media (max-width: 768px) {
+  .logo { height: 130px; }
+  .hero-title { font-size: 2.2rem; }
 }
