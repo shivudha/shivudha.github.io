@@ -5,50 +5,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shivudha Crew</title>
   <style>
-    /* General Styles */
-    body { margin:0; font-family: Arial, sans-serif; background:#f9f9f9; color:#333; }
-    a { text-decoration:none; color:#333; }
+    /* Reset and general styles */
+    body, html { margin:0; padding:0; font-family: Arial, sans-serif; }
+    a { text-decoration: none; color: inherit; }
 
-    /* Header & Video Background */
+    /* Header with fullscreen video */
     header {
-      position:relative; height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; color:white; overflow:hidden;
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
     }
-    #bg-video {
-      position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0;
-    }
-    header::before {
-      content:""; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.4); z-index:0;
-    }
-    .header-content { position:relative; z-index:1; }
-    .header-content img { width:120px; margin-bottom:20px; }
 
-    /* Navigation */
-    nav { margin-top:15px; }
-    nav a { margin: 0 15px; color:white; font-weight:bold; }
+    /* Video background */
+    #bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    /* Dark overlay to make content readable */
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 0;
+    }
+
+    /* Header content */
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+    .header-content img.logo {
+      width: 150px;  /* Small logo */
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .header-content h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      font-weight: bold;
+    }
 
     /* Collection Section */
-    section { padding:50px 20px; text-align:center; }
-    h2 { margin-bottom:40px; font-size:2em; }
-    .products { display:flex; flex-wrap:wrap; justify-content:center; gap:25px; }
-    .product { width:220px; background:white; border-radius:10px; padding:20px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:0.3s; }
-    .product img { width:100%; border-radius:10px; margin-bottom:10px; }
-    .product:hover { transform:translateY(-10px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+    section#collection {
+      padding: 50px 20px;
+      text-align: center;
+      background: #f9f9f9;
+    }
+    section#collection h2 {
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+    .product {
+      width: 220px;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
 
     /* Footer */
-    footer { background:#222; color:white; text-align:center; padding:30px 20px; }
-    footer a { color:white; font-weight:bold; }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    footer a {
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media(max-width:600px){
+      .header-content h1 { font-size: 2em; }
+      .products { flex-direction: column; align-items: center; }
+      .product { width: 80%; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header with Video Background -->
+  <!-- Header with video background -->
   <header>
     <video autoplay muted loop id="bg-video">
       <source src="hero.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
     <div class="header-content">
-      <img src="logo.png" alt="Shivudha Logo">
+      <img src="logo.png" alt="Shivudha Logo" class="logo">
       <h1>Shivudha Crew</h1>
       <nav>
         <a href="#collection">Collection</a>
@@ -84,6 +162,10 @@
     </div>
   </section>
 
- <footer id="footer">
-  &copy; 2025 Shivudha Crew | Email: <a href="mailto:shivudha112026@gmail.com">shivudha112026@gmail.com</a>
-</footer>
+  <!-- Footer with email -->
+  <footer id="footer">
+    &copy; 2025 Shivudha Crew | Email: <a href="mailto:shivudha112026@gmail.com">shivudha112026@gmail.com</a>
+  </footer>
+
+</body>
+</html>
