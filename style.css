@@ -7,3 +7,138 @@ shivudha.github.io/
     ├── cordset1.jpg
     ├── cordset2.jpg
     └── cordset3.jpg
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f6f3;
+  color: #1a1a1a;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  max-height: 70px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #b89b5e;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: #f1ede7;
+}
+
+.hero h1 {
+  font-size: 48px;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* COLLECTION */
+.collection {
+  padding: 70px 40px;
+  text-align: center;
+}
+
+.collection h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card span {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* ABOUT */
+.about {
+  padding: 70px 25px;
+  background: #fff;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 720px;
+  margin: auto;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* FOOTER */
+.contact {
+  background: #111;
+  color: #eee;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.contact a {
+  color: #b89b5e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact small {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #aaa;
+}
